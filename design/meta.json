@@ -1,0 +1,23 @@
+{
+  "client_meta": {
+    "background_color": {
+      "r": 0.035,
+      "g": 0.055,
+      "b": 0.137,
+      "a": 1
+    },
+    "thumbnail_size": {
+      "width": 1440,
+      "height": 2600
+    },
+    "render_coordinates": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 2600
+    }
+  },
+  "file_name": "SecurePay-Homepage-Design",
+  "developer_related_links": [],
+  "exported_at": "2026-03-27T12:00:00Z"
+}

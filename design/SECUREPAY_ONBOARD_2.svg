@@ -1,0 +1,46 @@
+<svg width="360" height="640" viewBox="0 0 360 640" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with orb effects -->
+  <defs>
+    <linearGradient id="onboardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060A1E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0A1030;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A0B35;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="orbGrad2">
+      <stop offset="0%" style="stop-color:#00A884;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#00A884;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <rect width="360" height="640" fill="url(#onboardGrad2)"/>
+  
+  <!-- Ambient orbs -->
+  <circle cx="80" cy="100" r="120" fill="url(#orbGrad2)"/>
+  <circle cx="320" cy="400" r="150" fill="url(#orbGrad2)"/>
+  
+  <!-- Progress indicator (Page 2 of 3) -->
+  <circle cx="160" cy="60" r="4" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="180" cy="60" r="4" fill="#00A884"/>
+  <circle cx="200" cy="60" r="4" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Main Content -->
+  <text x="180" y="280" font-family="'Google Sans', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">Protection That</text>
+  <text x="180" y="315" font-family="'Google Sans', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">Feels Invisible</text>
+  
+  <text x="180" y="360" font-family="'Google Sans', sans-serif" font-size="16" fill="#E5EDFF" text-anchor="middle">AI risk scoring, trust signals,</text>
+  <text x="180" y="385" font-family="'Google Sans', sans-serif" font-size="16" fill="#E5EDFF" text-anchor="middle">and biometric protection</text>
+  
+  <!-- Feature bullet points -->
+  <circle cx="70" cy="430" r="4" fill="#00A884"/>
+  <text x="85" y="435" font-family="'Google Sans', sans-serif" font-size="13" fill="#E5EDFF">Real-time fraud detection</text>
+  
+  <circle cx="70" cy="470" r="4" fill="#00A884"/>
+  <text x="85" y="475" font-family="'Google Sans', sans-serif" font-size="13" fill="#E5EDFF">Zero-knowledge encryption</text>
+  
+  <!-- CTA Button -->
+  <rect x="70" y="540" width="220" height="50" rx="14" fill="#00A884"/>
+  <text x="180" y="572" font-family="'Google Sans', sans-serif" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle">Continue</text>
+  
+  <!-- Skip Button -->
+  <text x="180" y="610" font-family="'Google Sans', sans-serif" font-size="14" fill="#8A9DD6" text-anchor="middle">Skip →</text>
+</svg>

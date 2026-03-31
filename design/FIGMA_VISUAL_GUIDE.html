@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePay Design System - Visual Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a1027;
+            color: #ffffff;
+            padding: 24px;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { font-size: 32px; margin-bottom: 8px; font-weight: 700; }
+        h2 { font-size: 24px; margin-top: 40px; margin-bottom: 24px; font-weight: 700; }
+        h3 { font-size: 18px; margin-top: 24px; margin-bottom: 16px; font-weight: 700; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }
+        .color-swatch {
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .color-swatch-large {
+            height: 100px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+        .color-value { font-size: 12px; font-family: monospace; opacity: 0.8; }
+        
+        .section { margin-bottom: 48px; }
+        .subsection { margin-left: 16px; margin-bottom: 24px; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        th { background: rgba(58, 99, 243, 0.2); font-weight: 700; }
+        
+        .button-demo {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 8px 8px 8px 0;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary { background: #3A63F3; color: white; }
+        .btn-ghost { background: transparent; border: 1px solid #e5edff; color: white; }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        
+        .copy-code {
+            background: rgba(0,0,0,0.3);
+            padding: 12px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            margin: 8px 0;
+            word-break: break-all;
+            border-left: 3px solid #3A63F3;
+        }
+        
+        .phone-mockup {
+            width: 100%;
+            max-width: 340px;
+            aspect-ratio: 1080/2400;
+            background: linear-gradient(135deg, #060A1E 0%, #0A1030 50%, #1A0B35 100%);
+            border-radius: 32px;
+            border: 1.3px solid #25345B;
+            box-shadow: 0 16px 30px rgba(0,0,0,0.66);
+            margin: 24px auto;
+            padding: 16px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 SecurePay Design System</h1>
+        <p>Visual reference guide for building components in Figma</p>
+        
+        <!-- COLORS -->
+        <div class="section">
+            <h2>Colors</h2>
+            
+            <h3>Dark Theme</h3>
+            <div class="grid">
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #090E23;"></div>
+                    Primary BG
+                    <div class="color-value">#090E23</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #FFFFFF;"></div>
+                    Primary Text
+                    <div class="color-value">#FFFFFF</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #3A63F3;"></div>
+                    Primary Accent
+                    <div class="color-value">#3A63F3</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #1ED6FF;"></div>
+                    Secondary Accent
+                    <div class="color-value">#1ED6FF</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #00A884;"></div>
+                    Success
+                    <div class="color-value">#00A884</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #EF5350;"></div>
+                    Warning
+                    <div class="color-value">#EF5350</div>
+                </div>
+            </div>
+            
+            <h3>Light Theme</h3>
+            <div class="grid">
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #F8FBFF; border: 1px solid #999;"></div>
+                    Primary BG
+                    <div class="color-value">#F8FBFF</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #0F2450;"></div>
+                    Primary Text
+                    <div class="color-value">#0F2450</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-swatch-large" style="background: #F4F8FF; border: 1px solid #999;"></div>
+                    Card BG
+                    <div class="color-value">#F4F8FF</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TYPOGRAPHY -->
+        <div class="section">
+            <h2>Typography</h2>
+            <p><strong>Font Family:</strong> Google Sans (all weights: 400, 600, 700, 800)</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Size</th>
+                        <th>Weight</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Heading / Greeting</td>
+                        <td>20px</td>
+                        <td>700</td>
+                        <td style="font-size: 20px; font-weight: 700;">Hello, User</td>
+                    </tr>
+                    <tr>
+                        <td>Section Title</td>
+                        <td>16px</td>
+                        <td>700</td>
+                        <td style="font-size: 16px; font-weight: 700;">Quick Actions</td>
+                    </tr>
+                    <tr>
+                        <td>Body Text</td>
+                        <td>13px</td>
+                        <td>400</td>
+                        <td style="font-size: 13px;">Secure UPI, Wallet & Recharges</td>
+                    </tr>
+                    <tr>
+                        <td>Label / Tile</td>
+                        <td>12px</td>
+                        <td>600</td>
+                        <td style="font-size: 12px; font-weight: 600;">Scan & Pay</td>
+                    </tr>
+                    <tr>
+                        <td>Small Text</td>
+                        <td>11px</td>
+                        <td>400</td>
+                        <td style="font-size: 11px;">SecurePay Status</td>
+                    </tr>
+                    <tr>
+                        <td>Amount / Balance</td>
+                        <td>32px</td>
+                        <td>800</td>
+                        <td style="font-size: 32px; font-weight: 800;">₹45,82,914</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- SPACING -->
+        <div class="section">
+            <h2>Spacing Scale</h2>
+            <table>
+                <thead>
+                    <tr><th>Name</th><th>Value</th><th>Usage</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>xs</td><td>4px</td><td>Minimal gaps</td></tr>
+                    <tr><td>sm</td><td>8px</td><td>Icon spacing</td></tr>
+                    <tr><td>md</td><td>12px</td><td>Element gaps</td></tr>
+                    <tr><td>lg</td><td>16px</td><td>Page padding</td></tr>
+                    <tr><td>xl</td><td>18px</td><td>Card padding</td></tr>
+                    <tr><td>xxl</td><td>24px</td><td>Section spacing</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- COMPONENTS -->
+        <div class="section">
+            <h2>Components</h2>
+            
+            <h3>Buttons</h3>
+            <button class="button-demo btn-primary">Primary Button</button>
+            <button class="button-demo btn-ghost">Ghost Button</button>
+            <p style="margin-top: 16px; font-size: 12px; opacity: 0.7;">
+                Primary: bg=#3A63F3, border-radius=14px, padding=12-16px 24px<br>
+                Ghost: bg=transparent, border=1px #E5EDFF, border-radius=14px
+            </p>
+            
+            <h3>Cards</h3>
+            <div class="card">
+                <div style="font-size: 13px; opacity: 0.8; margin-bottom: 8px;">Glass Card (Hero Panel)</div>
+                <div style="font-size: 16px; font-weight: 700;">Background: rgba(255, 255, 255, 0.08)</div>
+                <div style="font-size: 12px; opacity: 0.7; margin-top: 8px;">Border: 1px rgba(255, 255, 255, 0.1) | Blur: 10px | Radius: 16-18px</div>
+            </div>
+            
+            <h3>Border Radius</h3>
+            <table>
+                <thead>
+                    <tr><th>Component</th><th>Radius</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Hero Panel</td><td>18px</td></tr>
+                    <tr><td>Cards</td><td>16px</td></tr>
+                    <tr><td>Buttons</td><td>12-14px</td></tr>
+                    <tr><td>Icon Backgrounds</td><td>14px</td></tr>
+                    <tr><td>Avatars / Badges</td><td>999px (full)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- QUICK ACTIONS GRID -->
+        <div class="section">
+            <h2>Quick Actions Grid</h2>
+            <p>4 columns × 2 rows, 10px gap, 80×80px tiles</p>
+            <table>
+                <thead>
+                    <tr><th>#</th><th>Action</th><th>Color</th><th>Icon</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Scan & Pay</td><td>#4B7CFF</td><td>qr_code_2</td></tr>
+                    <tr><td>2</td><td>Send Money</td><td>#00A884</td><td>send</td></tr>
+                    <tr><td>3</td><td>Bank Transfer</td><td>#8A5BFF</td><td>account_balance</td></tr>
+                    <tr><td>4</td><td>Wallet Top-Up</td><td>#FF8A3D</td><td>wallet</td></tr>
+                    <tr><td>5</td><td>Bill Pay</td><td>#2CB3B0</td><td>receipt</td></tr>
+                    <tr><td>6</td><td>Recharge</td><td>#EF5350</td><td>signal_cellular_alt</td></tr>
+                    <tr><td>7</td><td>Cashback</td><td>#6D7C93</td><td>percent</td></tr>
+                    <tr><td>8</td><td>Rewards</td><td>#3A63F3</td><td>star</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- EASY COPY VALUES -->
+        <div class="section">
+            <h2>Copy-Paste Design Values</h2>
+            
+            <h3>Dark Theme Colors</h3>
+            <div class="copy-code">#090E23 #0F1429 #1A0B35 #FFFFFF #E5EDFF #D0DAF7 #3A63F3 #1ED6FF #00A884 #EF5350</div>
+            
+            <h3>Light Theme Colors</h3>
+            <div class="copy-code">#F8FBFF #F4F8FF #E8F0FF #0F2450 #3D5A8C #6B7FA3 #3A63F3 #1ED6FF #00A884 #EF5350</div>
+            
+            <h3>Quick Actions Colors</h3>
+            <div class="copy-code">#4B7CFF #00A884 #8A5BFF #FF8A3D #2CB3B0 #EF5350 #6D7C93 #3A63F3</div>
+            
+            <h3>Shadows (Dark)</h3>
+            <div class="copy-code">0px 8px 24px rgba(0, 0, 0, 0.32)</div>
+            <div class="copy-code">0px 12px 32px rgba(0, 0, 0, 0.40)</div>
+            
+            <h3>Shadows (Light)</h3>
+            <div class="copy-code">0px 4px 16px rgba(15, 36, 80, 0.12)</div>
+            <div class="copy-code">0px 8px 24px rgba(15, 36, 80, 0.16)</div>
+        </div>
+        
+        <!-- PHONE MOCKUP -->
+        <div class="section">
+            <h2>Phone Emulator Size</h2>
+            <p><strong>Target:</strong> 1080×2400px | <strong>Radius:</strong> 32px | <strong>Border:</strong> 1.3px #25345B</p>
+            <div class="phone-mockup"></div>
+        </div>
+        
+        <!-- INSTRUCTIONS -->
+        <div class="section">
+            <h2>📋 Manual Figma Setup Steps</h2>
+            <ol style="margin-left: 24px;">
+                <li style="margin: 12px 0;"><strong>Create a new Figma file</strong></li>
+                <li style="margin: 12px 0;"><strong>Set up Color Styles:</strong>
+                    <ul style="margin: 8px 0 8px 24px;">
+                        <li>Create color style for each color above (Background, Text, Accent, etc.)</li>
+                        <li>Label them: color/dark/primary, color/light/primary, etc.</li>
+                    </ul>
+                </li>
+                <li style="margin: 12px 0;"><strong>Set up Typography:</strong>
+                    <ul style="margin: 8px 0 8px 24px;">
+                        <li>Create text style: "Heading" (Google Sans, 20px, 700)</li>
+                        <li>Create text style: "Body" (Google Sans, 13px, 400)</li>
+                        <li>Create text style: "Label" (Google Sans, 12px, 600)</li>
+                        <li>Create text style: "Amount" (Google Sans, 32px, 800)</li>
+                    </ul>
+                </li>
+                <li style="margin: 12px 0;"><strong>Build Button Component:</strong>
+                    <ul style="margin: 8px 0 8px 24px;">
+                        <li>Rectangle: 200×60px, border-radius=14px</li>
+                        <li>Apply primary color, add text</li>
+                        <li>Create "Default" and "Pressed" (0.95 scale) variants</li>
+                    </ul>
+                </li>
+                <li style="margin: 12px 0;"><strong>Build Card Component:</strong>
+                    <ul style="margin: 8px 0 8px 24px;">
+                        <li>Rectangle with rgba(255,255,255,0.08) fill</li>
+                        <li>Stroke: 1px rgba(255,255,255,0.1)</li>
+                        <li>Effects: Blur 10px</li>
+                        <li>Border-radius: 16px</li>
+                    </ul>
+                </li>
+                <li style="margin: 12px 0;"><strong>Build Quick Actions Grid:</strong>
+                    <ul style="margin: 8px 0 8px 24px;">
+                        <li>8 tiles, 80×80px each, 10px gap</li>
+                        <li>Each tile: colored background, icon, label below</li>
+                        <li>Colors from "Quick Actions Colors" above</li>
+                    </ul>
+                </li>
+                <li style="margin: 12px 0;"><strong>Create Phone Frame:</strong>
+                    <ul style="margin: 8px 0 8px 24px;">
+                        <li>Rectangle: 1080×2400px</li>
+                        <li>Stroke: 1.3px #25345B</li>
+                        <li>Border-radius: 32px</li>
+                        <li>Shadow: 0 16px 30px rgba(0,0,0,0.66)</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1171 @@
+{
+  "$schema": "https://tokens.studio/schema/draft.json",
+  "name": "SecurePay Design System",
+  "version": "1.0.0",
+  "sets": {
+    "Dark": {
+    {
+      "name": "🎨 Color System",
+      "frames": [
+        {
+          "name": "Dark Theme Palette",
+          "width": 1200,
+          "height": 800,
+          "background": "#090E23",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Dark Theme Colors",
+              "fontSize": 32,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 24
+            },
+            {
+              "type": "heading",
+              "text": "Background",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#E5EDFF",
+              "x": 24,
+              "y": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Primary BG",
+              "color": "#090E23",
+              "x": 24,
+              "y": 120,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Secondary Surface",
+              "color": "#0F1429",
+              "x": 160,
+              "y": 120,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "heading",
+              "text": "Accents",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#E5EDFF",
+              "x": 24,
+              "y": 240
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Primary Accent",
+              "color": "#3A63F3",
+              "x": 24,
+              "y": 280,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Secondary Accent",
+              "color": "#1ED6FF",
+              "x": 160,
+              "y": 280,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Success",
+              "color": "#00A884",
+              "x": 296,
+              "y": 280,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Warning",
+              "color": "#EF5350",
+              "x": 432,
+              "y": 280,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "heading",
+              "text": "Text Colors",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#E5EDFF",
+              "x": 24,
+              "y": 400
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Primary Text",
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 440,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Secondary Text",
+              "color": "#E5EDFF",
+              "x": 160,
+              "y": 440,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Tertiary Text",
+              "color": "#D0DAF7",
+              "x": 296,
+              "y": 440,
+              "width": 120,
+              "height": 80
+            }
+          ]
+        },
+        {
+          "name": "Light Theme Palette",
+          "width": 1200,
+          "height": 800,
+          "background": "#F8FBFF",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Light Theme Colors",
+              "fontSize": 32,
+              "fontWeight": 700,
+              "color": "#0F2450",
+              "x": 24,
+              "y": 24
+            },
+            {
+              "type": "heading",
+              "text": "Background",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#0F2450",
+              "x": 24,
+              "y": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Primary BG",
+              "color": "#F8FBFF",
+              "x": 24,
+              "y": 120,
+              "width": 120,
+              "height": 80,
+              "border": "1px #B6CBFA"
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Secondary Surface",
+              "color": "#F4F8FF",
+              "x": 160,
+              "y": 120,
+              "width": 120,
+              "height": 80,
+              "border": "1px #B6CBFA"
+            },
+            {
+              "type": "heading",
+              "text": "Text Colors",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#0F2450",
+              "x": 24,
+              "y": 240
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Primary Text",
+              "color": "#0F2450",
+              "x": 24,
+              "y": 280,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Secondary Text",
+              "color": "#3D5A8C",
+              "x": 160,
+              "y": 280,
+              "width": 120,
+              "height": 80
+            },
+            {
+              "type": "colorSwatch",
+              "name": "Tertiary Text",
+              "color": "#6B7FA3",
+              "x": 296,
+              "y": 280,
+              "width": 120,
+              "height": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "📱 Onboarding Screens",
+      "frames": [
+        {
+          "name": "Slide 1 - Confident Payments",
+          "width": 1080,
+          "height": 2400,
+          "background": "linear-gradient(135deg, #040819 0%, #0A1231 50%, #1A0F3A 100%)",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Designed For Confident Payments",
+              "fontSize": 28,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 40,
+              "y": 800,
+              "width": 1000,
+              "textAlign": "center"
+            },
+            {
+              "type": "text",
+              "text": "A cinematic wallet experience with smart motion, adaptive themes, and elite-grade transaction clarity.",
+              "fontSize": 16,
+              "fontWeight": 400,
+              "color": "#E5EDFF",
+              "x": 40,
+              "y": 880,
+              "width": 1000,
+              "textAlign": "center"
+            },
+            {
+              "type": "tagChip",
+              "text": "Glass UI",
+              "x": 280,
+              "y": 1000,
+              "accentColor": "#5D7BFF"
+            },
+            {
+              "type": "tagChip",
+              "text": "Fluid Motion",
+              "x": 440,
+              "y": 1000,
+              "accentColor": "#5D7BFF"
+            },
+            {
+              "type": "tagChip",
+              "text": "Adaptive Theme",
+              "x": 620,
+              "y": 1000,
+              "accentColor": "#5D7BFF"
+            },
+            {
+              "type": "button",
+              "text": "Next",
+              "x": 340,
+              "y": 2200,
+              "width": 400,
+              "height": 60,
+              "backgroundColor": "#3A63F3",
+              "textColor": "#FFFFFF",
+              "borderRadius": 14
+            },
+            {
+              "type": "button",
+              "text": "Skip",
+              "x": 340,
+              "y": 2300,
+              "width": 400,
+              "height": 60,
+              "backgroundColor": "transparent",
+              "borderColor": "#E5EDFF",
+              "textColor": "#E5EDFF",
+              "borderRadius": 14
+            }
+          ]
+        },
+        {
+          "name": "Slide 2 - Protection",
+          "width": 1080,
+          "height": 2400,
+          "background": "linear-gradient(135deg, #040819 0%, #0A1231 50%, #1A0F3A 100%)",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Protection That Feels Invisible",
+              "fontSize": 28,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 40,
+              "y": 800,
+              "width": 1000,
+              "textAlign": "center"
+            },
+            {
+              "type": "text",
+              "text": "AI risk scoring, trust signals, and pre-debit checks run in the background so your flow stays effortless.",
+              "fontSize": 16,
+              "fontWeight": 400,
+              "color": "#E5EDFF",
+              "x": 40,
+              "y": 880,
+              "width": 1000,
+              "textAlign": "center"
+            },
+            {
+              "type": "tagChip",
+              "text": "Risk Engine",
+              "x": 280,
+              "y": 1000,
+              "accentColor": "#8A63FF"
+            },
+            {
+              "type": "tagChip",
+              "text": "Device Trust",
+              "x": 440,
+              "y": 1000,
+              "accentColor": "#8A63FF"
+            },
+            {
+              "type": "tagChip",
+              "text": "24x7 Monitoring",
+              "x": 600,
+              "y": 1000,
+              "accentColor": "#8A63FF"
+            },
+            {
+              "type": "button",
+              "text": "Next",
+              "x": 340,
+              "y": 2200,
+              "width": 400,
+              "height": 60,
+              "backgroundColor": "#3A63F3",
+              "textColor": "#FFFFFF",
+              "borderRadius": 14
+            }
+          ]
+        },
+        {
+          "name": "Slide 3 - Success Experience",
+          "width": 1080,
+          "height": 2400,
+          "background": "linear-gradient(135deg, #040819 0%, #0A1231 50%, #1A0F3A 100%)",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Every Successful Payment Feels Premium",
+              "fontSize": 28,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 40,
+              "y": 800,
+              "width": 1000,
+              "textAlign": "center"
+            },
+            {
+              "type": "text",
+              "text": "Confetti success bursts, kinetic feedback, and elegant transaction states make every action delightful.",
+              "fontSize": 16,
+              "fontWeight": 400,
+              "color": "#E5EDFF",
+              "x": 40,
+              "y": 880,
+              "width": 1000,
+              "textAlign": "center"
+            },
+            {
+              "type": "tagChip",
+              "text": "Success FX",
+              "x": 280,
+              "y": 1000,
+              "accentColor": "#FF7B9C"
+            },
+            {
+              "type": "tagChip",
+              "text": "Micro-interactions",
+              "x": 440,
+              "y": 1000,
+              "accentColor": "#FF7B9C"
+            },
+            {
+              "type": "tagChip",
+              "text": "Real-time Delight",
+              "x": 650,
+              "y": 1000,
+              "accentColor": "#FF7B9C"
+            },
+            {
+              "type": "button",
+              "text": "Get Started",
+              "x": 340,
+              "y": 2200,
+              "width": 400,
+              "height": 60,
+              "backgroundColor": "#3A63F3",
+              "textColor": "#FFFFFF",
+              "borderRadius": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "🏠 Home Screen",
+      "frames": [
+        {
+          "name": "Home - Dark Theme",
+          "width": 1080,
+          "height": 2400,
+          "background": "linear-gradient(135deg, #060A1E 0%, #0A1030 50%, #1A0B35 100%)",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Hello, User",
+              "fontSize": 20,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 16,
+              "y": 40
+            },
+            {
+              "type": "text",
+              "text": "Secure UPI, Wallet & Recharges",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "color": "#D0DAF7",
+              "x": 16,
+              "y": 70
+            },
+            {
+              "type": "card",
+              "name": "Hero Panel",
+              "x": 16,
+              "y": 120,
+              "width": 1048,
+              "height": 130,
+              "backgroundColor": "rgba(255, 255, 255, 0.08)",
+              "borderRadius": 18,
+              "blur": "10px",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "3D Icon Here",
+                  "color": "#3A63F3",
+                  "x": 20,
+                  "y": 40
+                },
+                {
+                  "type": "text",
+                  "text": "SecurePay Status: Active",
+                  "fontSize": 13,
+                  "color": "#E5EDFF",
+                  "x": 80,
+                  "y": 40
+                }
+              ]
+            },
+            {
+              "type": "card",
+              "name": "Balance Card",
+              "x": 16,
+              "y": 280,
+              "width": 1048,
+              "height": 160,
+              "backgroundColor": "linear-gradient(135deg, rgba(58, 99, 243, 0.2), rgba(30, 214, 255, 0.1))",
+              "borderRadius": 16,
+              "content": [
+                {
+                  "type": "text",
+                  "text": "SecurePay Wallet Balance",
+                  "fontSize": 13,
+                  "fontWeight": 400,
+                  "color": "#D6DEFF",
+                  "x": 16,
+                  "y": 16
+                },
+                {
+                  "type": "text",
+                  "text": "₹45,82,914",
+                  "fontSize": 32,
+                  "fontWeight": 800,
+                  "color": "#FFFFFF",
+                  "x": 16,
+                  "y": 50
+                },
+                {
+                  "type": "text",
+                  "text": "Linked Bank •••• 2184",
+                  "fontSize": 13,
+                  "color": "#B9C8EC",
+                  "x": 16,
+                  "y": 110
+                },
+                {
+                  "type": "icon",
+                  "name": "verified",
+                  "color": "#FFFFFF",
+                  "x": 330,
+                  "y": 110
+                },
+                {
+                  "type": "text",
+                  "text": "user@securepay",
+                  "fontSize": 13,
+                  "color": "#B9C8EC",
+                  "x": 360,
+                  "y": 110
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "Quick Actions",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 16,
+              "y": 480
+            },
+            {
+              "type": "grid",
+              "name": "Action Grid",
+              "x": 16,
+              "y": 520,
+              "columns": 4,
+              "rows": 2,
+              "gap": 10,
+              "tiles": [
+                {
+                  "name": "Scan & Pay",
+                  "color": "#4B7CFF",
+                  "icon": "qr_code"
+                },
+                {
+                  "name": "Send Money",
+                  "color": "#00A884",
+                  "icon": "send"
+                },
+                {
+                  "name": "Bank Transfer",
+                  "color": "#8A5BFF",
+                  "icon": "bank"
+                },
+                {
+                  "name": "Wallet Top-Up",
+                  "color": "#FF8A3D",
+                  "icon": "wallet"
+                },
+                {
+                  "name": "Bill Pay",
+                  "color": "#2CB3B0",
+                  "icon": "receipt"
+                },
+                {
+                  "name": "Recharge",
+                  "color": "#EF5350",
+                  "icon": "phone"
+                },
+                {
+                  "name": "Cashback",
+                  "color": "#6D7C93",
+                  "icon": "percent"
+                },
+                {
+                  "name": "Rewards",
+                  "color": "#3A63F3",
+                  "icon": "star"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "Pay Someone",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 16,
+              "y": 1100
+            },
+            {
+              "type": "horizontalScroll",
+              "name": "Contact Avatars",
+              "x": 16,
+              "y": 1150,
+              "height": 80,
+              "items": [
+                {"name": "A", "initials": true},
+                {"name": "B", "initials": true},
+                {"name": "C", "initials": true},
+                {"name": "D", "initials": true}
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "Recent Transactions",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 16,
+              "y": 1280
+            },
+            {
+              "type": "transactionList",
+              "x": 16,
+              "y": 1330,
+              "width": 1048,
+              "items": [
+                {
+                  "avatar": "JD",
+                  "name": "John Doe",
+                  "status": "Sent",
+                  "amount": "₹500",
+                  "color": "#00A884"
+                },
+                {
+                  "avatar": "SM",
+                  "name": "Sarah Miller",
+                  "status": "Received",
+                  "amount": "+₹2,000",
+                  "color": "#00A884"
+                },
+                {
+                  "avatar": "RP",
+                  "name": "Recharge Plan",
+                  "status": "Mobile Recharge",
+                  "amount": "-₹499",
+                  "color": "#EF5350"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Home - Light Theme",
+          "width": 1080,
+          "height": 2400,
+          "background": "linear-gradient(135deg, #F8FBFF 0%, #DBE8FF 100%)",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Hello, User",
+              "fontSize": 20,
+              "fontWeight": 700,
+              "color": "#0F2450",
+              "x": 16,
+              "y": 40
+            },
+            {
+              "type": "text",
+              "text": "Secure UPI, Wallet & Recharges",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "color": "#3D5A8C",
+              "x": 16,
+              "y": 70
+            },
+            {
+              "type": "card",
+              "name": "Hero Panel (Light)",
+              "x": 16,
+              "y": 120,
+              "width": 1048,
+              "height": 130,
+              "backgroundColor": "#F4F8FF",
+              "border": "1px #BECCEEE",
+              "borderRadius": 18,
+              "blur": "10px"
+            },
+            {
+              "type": "card",
+              "name": "Balance Card (Light)",
+              "x": 16,
+              "y": 280,
+              "width": 1048,
+              "height": 160,
+              "backgroundColor": "#F4F8FF",
+              "border": "1px #BECCEEE",
+              "borderRadius": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "🎯 Components",
+      "frames": [
+        {
+          "name": "Button States",
+          "width": 1200,
+          "height": 600,
+          "background": "#090E23",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Button Component States",
+              "fontSize": 24,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 24
+            },
+            {
+              "type": "button",
+              "text": "Default",
+              "x": 24,
+              "y": 100,
+              "width": 200,
+              "height": 60,
+              "backgroundColor": "#3A63F3",
+              "textColor": "#FFFFFF",
+              "borderRadius": 14
+            },
+            {
+              "type": "button",
+              "text": "Hover (Scale 1.02x)",
+              "x": 250,
+              "y": 100,
+              "width": 200,
+              "height": 60,
+              "backgroundColor": "#3A63F3",
+              "textColor": "#FFFFFF",
+              "borderRadius": 14,
+              "transform": "scale(1.02)"
+            },
+            {
+              "type": "button",
+              "text": "Pressed (Scale 0.95x)",
+              "x": 476,
+              "y": 100,
+              "width": 200,
+              "height": 60,
+              "backgroundColor": "#3A63F3",
+              "textColor": "#FFFFFF",
+              "borderRadius": 14,
+              "transform": "scale(0.95)"
+            },
+            {
+              "type": "button",
+              "text": "Ghost",
+              "x": 24,
+              "y": 200,
+              "width": 200,
+              "height": 60,
+              "backgroundColor": "transparent",
+              "borderColor": "#E5EDFF",
+              "textColor": "#FFFFFF",
+              "borderRadius": 14,
+              "border": "1px"
+            },
+            {
+              "type": "button",
+              "text": "Disabled",
+              "x": 250,
+              "y": 200,
+              "width": 200,
+              "height": 60,
+              "backgroundColor": "#4A5973",
+              "textColor": "#8A9DD6",
+              "borderRadius": 14,
+              "opacity": 0.5
+            }
+          ]
+        },
+        {
+          "name": "Cards & Containers",
+          "width": 1200,
+          "height": 800,
+          "background": "#090E23",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Card Components",
+              "fontSize": 24,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 24
+            },
+            {
+              "type": "card",
+              "name": "Glass Card (Default Shadow)",
+              "x": 24,
+              "y": 100,
+              "width": 300,
+              "height": 200,
+              "backgroundColor": "rgba(255, 255, 255, 0.08)",
+              "border": "1px rgba(255, 255, 255, 0.1)",
+              "borderRadius": 16,
+              "backdropFilter": "blur(10px)",
+              "boxShadow": "0px 8px 24px rgba(0, 0, 0, 0.32)"
+            },
+            {
+              "type": "card",
+              "name": "Glass Card (Hover - Raised)",
+              "x": 350,
+              "y": 100,
+              "width": 300,
+              "height": 200,
+              "backgroundColor": "rgba(255, 255, 255, 0.12)",
+              "border": "1px rgba(255, 255, 255, 0.15)",
+              "borderRadius": 16,
+              "backdropFilter": "blur(10px)",
+              "boxShadow": "0px 32px 64px rgba(0, 0, 0, 0.40)"
+            },
+            {
+              "type": "card",
+              "name": "Gradient Card",
+              "x": 676,
+              "y": 100,
+              "width": 300,
+              "height": 200,
+              "background": "linear-gradient(135deg, rgba(58, 99, 243, 0.2), rgba(30, 214, 255, 0.1))",
+              "border": "1px rgba(30, 214, 255, 0.2)",
+              "borderRadius": 16
+            },
+            {
+              "type": "card",
+              "name": "Interactive Tile",
+              "x": 24,
+              "y": 350,
+              "width": 140,
+              "height": 140,
+              "backgroundColor": "rgba(75, 124, 255, 0.2)",
+              "border": "1px rgba(75, 124, 255, 0.3)",
+              "borderRadius": 14,
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Scan & Pay",
+                  "fontSize": 12,
+                  "fontWeight": 600,
+                  "color": "#FFFFFF"
+                }
+              ]
+            },
+            {
+              "type": "card",
+              "name": "Interactive Tile (Pressed)",
+              "x": 190,
+              "y": 350,
+              "width": 140,
+              "height": 140,
+              "backgroundColor": "rgba(75, 124, 255, 0.2)",
+              "border": "1px rgba(75, 124, 255, 0.3)",
+              "borderRadius": 14,
+              "transform": "scale(0.95)",
+              "boxShadow": "0px 4px 12px rgba(0, 0, 0, 0.24)",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Scan & Pay",
+                  "fontSize": 12,
+                  "fontWeight": 600,
+                  "color": "#FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Typography Styles",
+          "width": 1200,
+          "height": 1000,
+          "background": "#090E23",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Typography Hierarchy",
+              "fontSize": 32,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 24,
+              "fontFamily": "Google Sans"
+            },
+            {
+              "type": "text",
+              "text": "Greeting (20px, 700)",
+              "fontSize": 20,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 100,
+              "fontFamily": "Google Sans"
+            },
+            {
+              "type": "text",
+              "text": "Section Title (16px, 700)",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 160,
+              "fontFamily": "Google Sans"
+            },
+            {
+              "type": "text",
+              "text": "Body Text (13px, 400)",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "color": "#E2E9FF",
+              "x": 24,
+              "y": 220,
+              "fontFamily": "Google Sans"
+            },
+            {
+              "type": "text",
+              "text": "Tile Label (12px, 600)",
+              "fontSize": 12,
+              "fontWeight": 600,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 280,
+              "fontFamily": "Google Sans"
+            },
+            {
+              "type": "text",
+              "text": "Small Text (11px, 400)",
+              "fontSize": 11,
+              "fontWeight": 400,
+              "color": "#D0DAF7",
+              "x": 24,
+              "y": 340,
+              "fontFamily": "Google Sans"
+            },
+            {
+              "type": "text",
+              "text": "Balance Amount (32px, 800)",
+              "fontSize": 32,
+              "fontWeight": 800,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 420,
+              "fontFamily": "Google Sans"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "✨ Animations & Effects",
+      "frames": [
+        {
+          "name": "Success Animation - Confetti Burst",
+          "width": 1080,
+          "height": 2400,
+          "background": "linear-gradient(135deg, #060A1E 0%, #0A1030 50%, #1A0B35 100%)",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "✓ Transaction Successful!",
+              "fontSize": 32,
+              "fontWeight": 700,
+              "color": "#00A884",
+              "x": 100,
+              "y": 1000,
+              "textAlign": "center"
+            },
+            {
+              "type": "text",
+              "text": "84 confetti particles burst from tap origin",
+              "fontSize": 14,
+              "color": "#E5EDFF",
+              "x": 100,
+              "y": 1100,
+              "textAlign": "center"
+            },
+            {
+              "type": "text",
+              "text": "Animation: 1050ms total",
+              "fontSize": 12,
+              "color": "#D0DAF7",
+              "x": 100,
+              "y": 1150,
+              "textAlign": "center"
+            },
+            {
+              "type": "text",
+              "text": "• Gravity arc: 0-400ms  | • Swirl: Continuous  | • Fade: 800-1050ms",
+              "fontSize": 11,
+              "color": "#B9C8EC",
+              "x": 100,
+              "y": 1200,
+              "textAlign": "center"
+            }
+          ]
+        },
+        {
+          "name": "Hover Tilt - 3D Motion",
+          "width": 1200,
+          "height": 600,
+          "background": "#090E23",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Hover Tilt 3D Effect",
+              "fontSize": 28,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 24
+            },
+            {
+              "type": "text",
+              "text": "Motion-tracked 3D rotation (±0.07 rad)",
+              "fontSize": 14,
+              "color": "#E5EDFF",
+              "x": 24,
+              "y": 80
+            },
+            {
+              "type": "card",
+              "name": "Rest State",
+              "x": 24,
+              "y": 140,
+              "width": 300,
+              "height": 300,
+              "backgroundColor": "linear-gradient(135deg, rgba(58, 99, 243, 0.2), rgba(30, 214, 255, 0.1))",
+              "borderRadius": 16,
+              "boxShadow": "0px 8px 24px rgba(0, 0, 0, 0.32)"
+            },
+            {
+              "type": "card",
+              "name": "Hover State (Elevated)",
+              "x": 376,
+              "y": 140,
+              "width": 300,
+              "height": 300,
+              "backgroundColor": "linear-gradient(135deg, rgba(58, 99, 243, 0.2), rgba(30, 214, 255, 0.1))",
+              "borderRadius": 16,
+              "boxShadow": "0px 32px 64px rgba(0, 0, 0, 0.40)",
+              "transform": "rotateX(5deg) rotateY(-5deg)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "📐 Spacing & Layout Grid",
+      "frames": [
+        {
+          "name": "Spacing System",
+          "width": 1200,
+          "height": 800,
+          "background": "#090E23",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Spacing Scale",
+              "fontSize": 28,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 24
+            },
+            {
+              "type": "spacingItem",
+              "label": "xs - 4px",
+              "x": 24,
+              "y": 100,
+              "width": 100,
+              "height": 20,
+              "backgroundColor": "#3A63F3"
+            },
+            {
+              "type": "spacingItem",
+              "label": "sm - 8px",
+              "x": 24,
+              "y": 140,
+              "width": 150,
+              "height": 20,
+              "backgroundColor": "#3A63F3"
+            },
+            {
+              "type": "spacingItem",
+              "label": "md - 12px",
+              "x": 24,
+              "y": 180,
+              "width": 200,
+              "height": 20,
+              "backgroundColor": "#3A63F3"
+            },
+            {
+              "type": "spacingItem",
+              "label": "lg - 16px",
+              "x": 24,
+              "y": 220,
+              "width": 250,
+              "height": 20,
+              "backgroundColor": "#3A63F3"
+            },
+            {
+              "type": "spacingItem",
+              "label": "xl - 18px",
+              "x": 24,
+              "y": 260,
+              "width": 300,
+              "height": 20,
+              "backgroundColor": "#3A63F3"
+            },
+            {
+              "type": "spacingItem",
+              "label": "xxl - 24px",
+              "x": 24,
+              "y": 300,
+              "width": 350,
+              "height": 20,
+              "backgroundColor": "#3A63F3"
+            }
+          ]
+        },
+        {
+          "name": "Responsive Phone Frame",
+          "width": 1200,
+          "height": 2600,
+          "background": "#0A1027",
+          "elements": [
+            {
+              "type": "heading",
+              "text": "Phone Emulator Frames",
+              "fontSize": 24,
+              "fontWeight": 700,
+              "color": "#FFFFFF",
+              "x": 24,
+              "y": 24
+            },
+            {
+              "type": "phoneFrame",
+              "name": "Target Size: 1080 × 2400",
+              "x": 60,
+              "y": 100,
+              "width": 1080,
+              "height": 2400,
+              "borderRadius": 32,
+              "borderColor": "#25345B",
+              "borderWidth": 1.3,
+              "boxShadow": "0 16px 30px rgba(0, 0, 0, 0.66)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "created": "March 31, 2026",
+    "designer": "SecurePay Design Team",
+    "lastModified": "March 31, 2026",
+    "title": "SecurePay - Complete Design System",
+    "description": "Production-ready fintech wallet app design with light/dark themes, 3D components, animations, and responsive mobile layout"
+  }
+}

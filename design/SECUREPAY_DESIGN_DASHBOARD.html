@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePay Design System - Interactive Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0e23;
+            color: #ffffff;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100vh;
+            background: #0f1430;
+            border-right: 1px solid rgba(255,255,255,0.1);
+            overflow-y: auto;
+            padding: 24px 16px;
+        }
+        .sidebar h3 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #8a9dd6;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        .sidebar-item {
+            padding: 12px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+        .sidebar-item:hover {
+            background: rgba(58, 99, 243, 0.1);
+        }
+        .sidebar-item.active {
+            background: rgba(58, 99, 243, 0.2);
+            color: #3A63F3;
+            border-left-color: #3A63F3;
+        }
+        .main {
+            margin-left: 280px;
+            min-height: 100vh;
+            padding: 24px;
+        }
+        .header {
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 14px;
+            color: #d0daf7;
+        }
+        .screens {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .screen-card {
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+            background: #090e23;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .screen-card:hover {
+            border-color: #3A63F3;
+            box-shadow: 0 8px 24px rgba(58, 99, 243, 0.2);
+        }
+        .screen-preview {
+            width: 100%;
+            aspect-ratio: 9/16;
+            background: linear-gradient(135deg, #060A1E 0%, #0A1030 50%, #1A0B35 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #8a9dd6;
+            overflow: hidden;
+        }
+        .screen-info {
+            padding: 16px;
+        }
+        .screen-info h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .screen-info p {
+            font-size: 12px;
+            color: #d0daf7;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: #0a0e23;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow: auto;
+            position: relative;
+        }
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .phone-frame {
+            width: 360px;
+            height: 640px;
+            border: 12px solid #25345B;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            background: #090e23;
+            margin: 40px auto;
+        }
+        .phone-content {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            padding: 16px;
+            background: linear-gradient(135deg, #060A1E 0%, #0A1030 50%, #1A0B35 100%);
+        }
+        .greeting {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            font-size: 13px;
+            color: #d0daf7;
+            margin-bottom: 16px;
+        }
+        .hero-panel {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            padding: 16px;
+            margin-bottom: 16px;
+            backdrop-filter: blur(10px);
+        }
+        .balance-card {
+            background: linear-gradient(135deg, rgba(58, 99, 243, 0.2), rgba(30, 214, 255, 0.1));
+            border: 1px solid rgba(30, 214, 255, 0.2);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .balance-label {
+            font-size: 13px;
+            color: #d6deff;
+            margin-bottom: 8px;
+        }
+        .balance-amount {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 16px;
+            margin-bottom: 12px;
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        .tile {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            padding: 4px;
+        }
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .color-box {
+            border-radius: 12px;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 24px;">SecurePay</h2>
+        
+        <h3>Screens</h3>
+        <div class="sidebar-item active" onclick="loadScreen('home-dark')">🏠 Home (Dark)</div>
+        <div class="sidebar-item" onclick="loadScreen('home-light')">🏠 Home (Light)</div>
+        <div class="sidebar-item" onclick="loadScreen('onboard-1')">📱 Onboarding 1</div>
+        <div class="sidebar-item" onclick="loadScreen('onboard-2')">📱 Onboarding 2</div>
+        <div class="sidebar-item" onclick="loadScreen('onboard-3')">📱 Onboarding 3</div>
+        
+        <h3>References</h3>
+        <div class="sidebar-item" onclick="loadScreen('colors')">🎨 Colors</div>
+        <div class="sidebar-item" onclick="loadScreen('typography')">📝 Typography</div>
+        <div class="sidebar-item" onclick="loadScreen('components')">🎯 Components</div>
+        <div class="sidebar-item" onclick="loadScreen('spacing')">📐 Spacing</div>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h1>SecurePay Design System</h1>
+            <p>Complete visual reference for building in Figma</p>
+        </div>
+
+        <div id="content"></div>
+    </div>
+
+    <script>
+        const screens = {
+            'home-dark': {
+                title: 'Home Screen (Dark)',
+                type: 'phone',
+                html: `
+                    <div class="greeting">Hello, User</div>
+                    <div class="subtitle">Secure UPI, Wallet & Recharges</div>
+                    <div class="hero-panel">
+                        <div style="font-size: 13px; color: #3A63F3;">🔒</div>
+                        <div style="font-size: 13px; color: #E5EDFF; margin-top: 8px;">SecurePay Status: Active</div>
+                    </div>
+                    <div class="balance-card">
+                        <div class="balance-label">SecurePay Wallet Balance</div>
+                        <div class="balance-amount">₹45,82,914</div>
+                        <div style="font-size: 11px; color: #B9C8EC;">Linked Bank •••• 2184</div>
+                    </div>
+                    <div class="section-title">Quick Actions</div>
+                    <div class="grid-4">
+                        <div class="tile" style="background: #4B7CFF;">📱</div>
+                        <div class="tile" style="background: #00A884;">💸</div>
+                        <div class="tile" style="background: #8A5BFF;">🏦</div>
+                        <div class="tile" style="background: #FF8A3D;">💰</div>
+                        <div class="tile" style="background: #2CB3B0;">📄</div>
+                        <div class="tile" style="background: #EF5350;">📞</div>
+                        <div class="tile" style="background: #6D7C93;">%</div>
+                        <div class="tile" style="background: #3A63F3;">⭐</div>
+                    </div>
+                    <div class="section-title">Recent Transactions</div>
+                    <div style="font-size: 12px; color: #E5EDFF; margin-bottom: 12px;">John Doe → ₹500</div>
+                    <div style="font-size: 12px; color: #00A884;">+₹2,000 from Sarah Miller</div>
+                `
+            },
+            'home-light': {
+                title: 'Home Screen (Light)',
+                type: 'phone',
+                html: `
+                    <div style="color: #0F2450; font-size: 20px; font-weight: 700; margin-bottom: 4px;">Hello, User</div>
+                    <div style="color: #3D5A8C; font-size: 13px; margin-bottom: 16px;">Secure UPI, Wallet & Recharges</div>
+                    <div style="background: #F4F8FF; border: 1px solid #BECCEEE; border-radius: 18px; padding: 16px; margin-bottom: 16px;">
+                        <div style="font-size: 13px; color: #3A63F3;">🔒</div>
+                    </div>
+                    <div style="background: #F4F8FF; border: 1px solid #BECCEEE; border-radius: 16px; padding: 16px; margin-bottom: 16px;">
+                        <div style="font-size: 11px; color: #6B7FA3;">SecurePay Wallet Balance</div>
+                        <div style="font-size: 32px; font-weight: 800; color: #0F2450;">₹45,82,914</div>
+                    </div>
+                `
+            },
+            'onboard-1': {
+                title: 'Onboarding - Confident Payments',
+                type: 'phone',
+                html: `
+                    <div style="text-align: center; padding-top: 600px;">
+                        <div style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px;">Designed For Confident Payments</div>
+                        <div style="font-size: 16px; color: #E5EDFF; margin-bottom: 24px;">A cinematic wallet experience</div>
+                        <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+                            <span style="background: rgba(93, 123, 255, 0.2); border: 1px solid rgba(93, 123, 255, 0.3); border-radius: 16px; padding: 6px 12px; font-size: 11px;">Glass UI</span>
+                            <span style="background: rgba(93, 123, 255, 0.2); border: 1px solid rgba(93, 123, 255, 0.3); border-radius: 16px; padding: 6px 12px; font-size: 11px;">Fluid Motion</span>
+                        </div>
+                    </div>
+                `
+            },
+            'onboard-2': {
+                title: 'Onboarding - Protection',
+                type: 'phone',
+                html: `
+                    <div style="text-align: center; padding-top: 600px;">
+                        <div style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px;">Protection That Feels Invisible</div>
+                        <div style="font-size: 16px; color: #E5EDFF; margin-bottom: 24px;">AI risk scoring, trust signals...</div>
+                    </div>
+                `
+            },
+            'onboard-3': {
+                title: 'Onboarding - Success Experience',
+                type: 'phone',
+                html: `
+                    <div style="text-align: center; padding-top: 600px;">
+                        <div style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px;">Every Successful Payment Feels Premium</div>
+                        <div style="font-size: 16px; color: #E5EDFF;">Confetti success bursts...</div>
+                    </div>
+                `
+            },
+            'colors': {
+                title: 'Color System',
+                type: 'reference',
+                html: `
+                    <h3 style="font-size: 20px; margin-bottom: 16px;">Dark Theme</h3>
+                    <div class="color-grid">
+                        <div class="color-box" style="background: #090E23; border: 1px solid #25345B;">Primary</div>
+                        <div class="color-box" style="background: #FFFFFF;">Text</div>
+                        <div class="color-box" style="background: #3A63F3;">Accent</div>
+                        <div class="color-box" style="background: #00A884;">Success</div>
+                    </div>
+                    <h3 style="font-size: 20px; margin: 32px 0 16px;">Light Theme</h3>
+                    <div class="color-grid">
+                        <div class="color-box" style="background: #F8FBFF; border: 1px solid #999;">Primary</div>
+                        <div class="color-box" style="background: #0F2450; color: white;">Text</div>
+                        <div class="color-box" style="background: #3A63F3;">Accent</div>
+                        <div class="color-box" style="background: #00A884;">Success</div>
+                    </div>
+                `
+            },
+            'typography': {
+                title: 'Typography',
+                type: 'reference',
+                html: `
+                    <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px; margin-bottom: 16px;">
+                        <div style="font-size: 20px; font-weight: 700; margin-bottom: 4px;">Greeting (20px, 700)</div>
+                        <div style="font-size: 12px; color: #8a9dd6;">Google Sans</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px; margin-bottom: 16px;">
+                        <div style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Section Title (16px, 700)</div>
+                        <div style="font-size: 12px; color: #8a9dd6;">Google Sans</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px; margin-bottom: 16px;">
+                        <div style="font-size: 13px; margin-bottom: 4px;">Body Text (13px, 400)</div>
+                        <div style="font-size: 12px; color: #8a9dd6;">Regular weight for descriptions</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px;">
+                        <div style="font-size: 32px; font-weight: 800; margin-bottom: 4px;">₹45,82,914 (32px, 800)</div>
+                        <div style="font-size: 12px; color: #8a9dd6;">ExtraBold for amounts</div>
+                    </div>
+                `
+            },
+            'components': {
+                title: 'Components',
+                type: 'reference',
+                html: `
+                    <h3 style="font-size: 18px; margin-bottom: 16px;">Buttons</h3>
+                    <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+                        <button style="padding: 12px 24px; background: #3A63F3; color: white; border: none; border-radius: 14px; cursor: pointer;">Primary</button>
+                        <button style="padding: 12px 24px; background: transparent; color: #E5EDFF; border: 1px solid #E5EDFF; border-radius: 14px; cursor: pointer;">Ghost</button>
+                    </div>
+                    
+                    <h3 style="font-size: 18px; margin-bottom: 16px;">Cards</h3>
+                    <div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px; margin-bottom: 12px;">
+                        <div>Glass Card</div>
+                        <div style="font-size: 12px; color: #8a9dd6; margin-top: 8px;">Blur: 10px | Radius: 16px</div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, rgba(58, 99, 243, 0.2), rgba(30, 214, 255, 0.1)); border: 1px solid rgba(30, 214, 255, 0.2); border-radius: 16px; padding: 16px;">
+                        <div>Gradient Card</div>
+                        <div style="font-size: 12px; color: #8a9dd6; margin-top: 8px;">For balances & highlights</div>
+                    </div>
+                `
+            },
+            'spacing': {
+                title: 'Spacing System',
+                type: 'reference',
+                html: `
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <th style="text-align: left; padding: 12px; font-weight: 700;">Scale</th>
+                            <th style="text-align: left; padding: 12px; font-weight: 700;">Value</th>
+                            <th style="text-align: left; padding: 12px; font-weight: 700;">Usage</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: 12px;">xs</td>
+                            <td style="padding: 12px;">4px</td>
+                            <td style="padding: 12px;">Minimal gaps</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: 12px;">sm</td>
+                            <td style="padding: 12px;">8px</td>
+                            <td style="padding: 12px;">Icon spacing</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: 12px;">md</td>
+                            <td style="padding: 12px;">12px</td>
+                            <td style="padding: 12px;">Element gaps</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: 12px;">lg</td>
+                            <td style="padding: 12px;">16px</td>
+                            <td style="padding: 12px;">Page padding</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px;">xl</td>
+                            <td style="padding: 12px;">18px</td>
+                            <td style="padding: 12px;">Card padding</td>
+                        </tr>
+                    </table>
+                `
+            }
+        };
+
+        function loadScreen(screenId) {
+            const screen = screens[screenId];
+            const content = document.getElementById('content');
+            
+            // Update sidebar
+            document.querySelectorAll('.sidebar-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            if (screen.type === 'phone') {
+                content.innerHTML = `
+                    <h2>${screen.title}</h2>
+                    <div class="phone-frame">
+                        <div class="phone-content">
+                            ${screen.html}
+                        </div>
+                    </div>
+                `;
+            } else {
+                content.innerHTML = `
+                    <h2>${screen.title}</h2>
+                    <div style="margin-top: 24px;">
+                        ${screen.html}
+                    </div>
+                `;
+            }
+        }
+
+        // Load home screen on page load
+        loadScreen('home-dark');
+    </script>
+</body>
+</html>

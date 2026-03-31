@@ -1,0 +1,25 @@
+﻿{
+    "exported_at":  "2026-03-27T10:15:08.7618915Z",
+    "client_meta":  {
+                        "render_coordinates":  {
+                                                   "y":  0,
+                                                   "width":  1440,
+                                                   "height":  2600,
+                                                   "x":  0
+                                               },
+                        "background_color":  {
+                                                 "g":  0.0549,
+                                                 "r":  0.0353,
+                                                 "b":  0.1373,
+                                                 "a":  1
+                                             },
+                        "thumbnail_size":  {
+                                               "height":  2600,
+                                               "width":  1440
+                                           }
+                    },
+    "file_name":  "SecurePay-Homepage",
+    "developer_related_links":  [
+
+                                ]
+}

@@ -1,0 +1,317 @@
+{
+  "version": "1.0",
+  "name": "SecurePay Design System",
+  "description": "Complete design tokens for SecurePay fintech wallet app",
+  "global": {
+    "colors": {
+      "dark": {
+        "background": {
+          "primary": {
+            "value": "#090E23",
+            "type": "color",
+            "description": "Dark Navy - main scaffold background"
+          },
+          "gradient": {
+            "value": "linear-gradient(135deg, #060A1E 0%, #0A1030 50%, #1A0B35 100%)",
+            "type": "color",
+            "description": "Primary gradient top-left to bottom-right"
+          },
+          "secondary": {
+            "value": "#ffffff14",
+            "type": "color",
+            "description": "Cards and containers - 8% white"
+          },
+          "tertiary": {
+            "value": "#ffffff1f",
+            "type": "color",
+            "description": "Pills and badges - 12% white"
+          },
+          "hover": {
+            "value": "#ffffff24",
+            "type": "color",
+            "description": "Interactive elements hover - 14% white"
+          }
+        },
+        "accent": {
+          "primary": {
+            "value": "#3A63F3",
+            "type": "color",
+            "description": "Primary seed color for Material 3"
+          },
+          "secondary": {
+            "value": "#1ED6FF",
+            "type": "color",
+            "description": "Cyan accent"
+          },
+          "tertiary": {
+            "value": "#34A0FF",
+            "type": "color",
+            "description": "Sky blue accent"
+          }
+        },
+        "semantic": {
+          "success": {
+            "value": "#00A884",
+            "type": "color",
+            "description": "Green - received payments, active status"
+          },
+          "warning": {
+            "value": "#EF5350",
+            "type": "color",
+            "description": "Red - failed/pending"
+          }
+        },
+        "text": {
+          "primary": {
+            "value": "#FFFFFF",
+            "type": "color",
+            "description": "Primary text - white 100%"
+          },
+          "secondary": {
+            "value": "#E5EDFF",
+            "type": "color",
+            "description": "Secondary text - light blue"
+          },
+          "tertiary": {
+            "value": "#D0DAF7",
+            "type": "color",
+            "description": "Tertiary text - light blue-gray"
+          },
+          "disabled": {
+            "value": "#8A9DD6",
+            "type": "color",
+            "description": "Disabled text - muted blue"
+          }
+        }
+      },
+      "light": {
+        "background": {
+          "primary": {
+            "value": "#F8FBFF",
+            "type": "color",
+            "description": "Light navy-tinted white - main scaffold"
+          },
+          "gradient": {
+            "value": "linear-gradient(135deg, #F8FBFF 0%, #DBE8FF 100%)",
+            "type": "color",
+            "description": "Light gradient top-left to bottom-right"
+          },
+          "secondary": {
+            "value": "#f4f8ff",
+            "type": "color",
+            "description": "Frosted surfaces - very light blue"
+          },
+          "tertiary": {
+            "value": "#e8f0ff",
+            "type": "color",
+            "description": "Light pills and badges"
+          }
+        },
+        "text": {
+          "primary": {
+            "value": "#0F2450",
+            "type": "color",
+            "description": "Primary text - navy"
+          },
+          "secondary": {
+            "value": "#3D5A8C",
+            "type": "color",
+            "description": "Secondary text - medium blue"
+          },
+          "tertiary": {
+            "value": "#6B7FA3",
+            "type": "color",
+            "description": "Tertiary text - soft blue-gray"
+          }
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "primary": {
+          "value": "Google Sans",
+          "type": "typography",
+          "description": "Primary font family for all text"
+        }
+      },
+      "fontSize": {
+        "xs": {
+          "value": "11px",
+          "type": "dimension"
+        },
+        "sm": {
+          "value": "12px",
+          "type": "dimension"
+        },
+        "md": {
+          "value": "13px",
+          "type": "dimension"
+        },
+        "lg": {
+          "value": "16px",
+          "type": "dimension"
+        },
+        "xl": {
+          "value": "20px",
+          "type": "dimension"
+        },
+        "xxl": {
+          "value": "32px",
+          "type": "dimension"
+        }
+      },
+      "fontWeight": {
+        "regular": {
+          "value": "400",
+          "type": "typography"
+        },
+        "semibold": {
+          "value": "600",
+          "type": "typography"
+        },
+        "bold": {
+          "value": "700",
+          "type": "typography"
+        },
+        "extrabold": {
+          "value": "800",
+          "type": "typography"
+        }
+      },
+      "styles": {
+        "greeting": {
+          "value": {
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "lineHeight": "1.0",
+            "fontFamily": "Google Sans"
+          },
+          "type": "typography",
+          "description": "Main greeting text"
+        },
+        "subtitle": {
+          "value": {
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "lineHeight": "1.0",
+            "fontFamily": "Google Sans"
+          },
+          "type": "typography"
+        },
+        "sectionTitle": {
+          "value": {
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "1.0",
+            "fontFamily": "Google Sans"
+          },
+          "type": "typography"
+        },
+        "balanceAmount": {
+          "value": {
+            "fontSize": "32px",
+            "fontWeight": "800",
+            "lineHeight": "1.0",
+            "fontFamily": "Google Sans"
+          },
+          "type": "typography"
+        }
+      }
+    },
+    "spacing": {
+      "xs": {
+        "value": "4px",
+        "type": "dimension"
+      },
+      "sm": {
+        "value": "8px",
+        "type": "dimension"
+      },
+      "md": {
+        "value": "12px",
+        "type": "dimension"
+      },
+      "lg": {
+        "value": "16px",
+        "type": "dimension"
+      },
+      "xl": {
+        "value": "18px",
+        "type": "dimension"
+      },
+      "xxl": {
+        "value": "24px",
+        "type": "dimension"
+      }
+    },
+    "borderRadius": {
+      "sm": {
+        "value": "12px",
+        "type": "dimension",
+        "description": "Small buttons, icon backgrounds"
+      },
+      "md": {
+        "value": "14px",
+        "type": "dimension",
+        "description": "Standard cards, input fields"
+      },
+      "lg": {
+        "value": "16px",
+        "type": "dimension",
+        "description": "Section cards"
+      },
+      "xl": {
+        "value": "18px",
+        "type": "dimension",
+        "description": "Hero panel"
+      },
+      "full": {
+        "value": "999px",
+        "type": "dimension",
+        "description": "Fully rounded pills, badges, avatars"
+      }
+    },
+    "shadow": {
+      "dark": {
+        "sm": {
+          "value": "0px 4px 12px rgba(0, 0, 0, 0.24)",
+          "type": "shadow"
+        },
+        "md": {
+          "value": "0px 8px 24px rgba(0, 0, 0, 0.32)",
+          "type": "shadow"
+        },
+        "lg": {
+          "value": "0px 12px 32px rgba(0, 0, 0, 0.40)",
+          "type": "shadow"
+        }
+      },
+      "light": {
+        "sm": {
+          "value": "0px 2px 8px rgba(15, 36, 80, 0.08)",
+          "type": "shadow"
+        },
+        "md": {
+          "value": "0px 4px 16px rgba(15, 36, 80, 0.12)",
+          "type": "shadow"
+        },
+        "lg": {
+          "value": "0px 8px 24px rgba(15, 36, 80, 0.16)",
+          "type": "shadow"
+        }
+      }
+    },
+    "backdropFilter": {
+      "md": {
+        "value": "blur(10px)",
+        "type": "effect",
+        "description": "Hero panel glassmorphism"
+      },
+      "sm": {
+        "value": "blur(8px)",
+        "type": "effect",
+        "description": "Offer ribbon glassmorphism"
+      }
+    }
+  }
+}

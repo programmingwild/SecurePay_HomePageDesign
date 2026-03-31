@@ -1,0 +1,150 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#090E23;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A1030;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="1600" fill="url(#darkGrad)"/>
+  
+  <!-- SECTION: Typography -->
+  <text x="40" y="60" font-family="'Google Sans'" font-size="32" font-weight="700" fill="#FFFFFF">Typography System</text>
+  
+  <!-- Heading Large -->
+  <text x="40" y="120" font-family="'Google Sans'" font-size="20" font-weight="700" fill="#FFFFFF">Heading Large</text>
+  <text x="40" y="155" font-family="'Google Sans'" font-size="20" font-weight="700" fill="#E5EDFF">20px, Weight 700</text>
+  
+  <!-- Heading Medium -->
+  <text x="400" y="120" font-family="'Google Sans'" font-size="18" font-weight="700" fill="#FFFFFF">Heading Medium</text>
+  <text x="400" y="155" font-family="'Google Sans'" font-size="14" fill="#E5EDFF">18px, Weight 700</text>
+  
+  <!-- Body -->
+  <text x="800" y="120" font-family="'Google Sans'" font-size="16" fill="#FFFFFF">Body Text</text>
+  <text x="800" y="155" font-family="'Google Sans'" font-size="14" fill="#E5EDFF">16px, Weight 400</text>
+  
+  <!-- SECTION: Colors Dark -->
+  <text x="40" y="220" font-family="'Google Sans'" font-size="24" font-weight="700" fill="#FFFFFF">Dark Theme Colors</text>
+  
+  <!-- Color swatches row 1 -->
+  <rect x="40" y="260" width="100" height="100" rx="12" fill="#090E23" stroke="#25345B" stroke-width="2"/>
+  <text x="90" y="315" font-family="'Google Sans'" font-size="11" fill="#E5EDFF" text-anchor="middle" font-weight="600">#090E23</text>
+  
+  <rect x="160" y="260" width="100" height="100" rx="12" fill="#FFFFFF"/>
+  <text x="210" y="315" font-family="'Google Sans'" font-size="11" fill="#090E23" text-anchor="middle" font-weight="600">#FFFFFF</text>
+  
+  <rect x="280" y="260" width="100" height="100" rx="12" fill="#3A63F3"/>
+  <text x="330" y="315" font-family="'Google Sans'" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">#3A63F3</text>
+  
+  <rect x="400" y="260" width="100" height="100" rx="12" fill="#00A884"/>
+  <text x="450" y="315" font-family="'Google Sans'" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">#00A884</text>
+  
+  <rect x="520" y="260" width="100" height="100" rx="12" fill="#FF8A3D"/>
+  <text x="570" y="315" font-family="'Google Sans'" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">#FF8A3D</text>
+  
+  <rect x="640" y="260" width="100" height="100" rx="12" fill="#1E D6FF"/>
+  <text x="690" y="315" font-family="'Google Sans'" font-size="11" fill="#090E23" text-anchor="middle" font-weight="600">#1ED6FF</text>
+  
+  <rect x="760" y="260" width="100" height="100" rx="12" fill="#8A5BFF"/>
+  <text x="810" y="315" font-family="'Google Sans'" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">#8A5BFF</text>
+  
+  <rect x="880" y="260" width="100" height="100" rx="12" fill="#2CB3B0"/>
+  <text x="930" y="315" font-family="'Google Sans'" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">#2CB3B0</text>
+  
+  <!-- SECTION: Buttons -->
+  <text x="40" y="420" font-family="'Google Sans'" font-size="24" font-weight="700" fill="#FFFFFF">Button Components</text>
+  
+  <!-- Button Primary -->
+  <rect x="40" y="460" width="200" height="60" rx="14" fill="#3A63F3"/>
+  <text x="140" y="499" font-family="'Google Sans'" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle">Primary Button</text>
+  
+  <!-- Button Ghost -->
+  <rect x="260" y="460" width="200" height="60" rx="14" fill="transparent" stroke="#E5EDFF" stroke-width="2"/>
+  <text x="360" y="499" font-family="'Google Sans'" font-size="16" font-weight="600" fill="#E5EDFF" text-anchor="middle">Ghost Button</text>
+  
+  <!-- Button Success -->
+  <rect x="480" y="460" width="200" height="60" rx="14" fill="#00A884"/>
+  <text x="580" y="499" font-family="'Google Sans'" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle">Success Button</text>
+  
+  <!-- SECTION: Cards -->
+  <text x="40" y="570" font-family="'Google Sans'" font-size="24" font-weight="700" fill="#FFFFFF">Card Components</text>
+  
+  <!-- Glass Card -->
+  <rect x="40" y="610" width="280" height="180" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <circle cx="100" cy="670" r="30" fill="#3A63F3"/>
+  <text x="145" y="655" font-family="'Google Sans'" font-size="16" font-weight="700" fill="#FFFFFF">Glass Card</text>
+  <text x="145" y="680" font-family="'Google Sans'" font-size="13" fill="#D0DAF7">Blur: 10px, Radius: 16px</text>
+  <text x="145" y="705" font-family="'Google Sans'" font-size="12" fill="#8A9DD6">Backdrop filter enabled</text>
+  <text x="145" y="775" font-family="'Google Sans'" font-size="11" fill="#6D7C93">Opacity: 8% dark mode</text>
+  
+  <!-- Gradient Card -->
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(58, 99, 243, 0.2);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(30, 214, 255, 0.1);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="360" y="610" width="280" height="180" rx="16" fill="url(#cardGrad)" stroke="rgba(30, 214, 255, 0.2)" stroke-width="1"/>
+  <circle cx="420" cy="670" r="30" fill="#1ED6FF" opacity="0.6"/>
+  <text x="465" y="655" font-family="'Google Sans'" font-size="16" font-weight="700" fill="#FFFFFF">Gradient Card</text>
+  <text x="465" y="680" font-family="'Google Sans'" font-size="13" fill="#D0DAF7">For balances, highlights</text>
+  <text x="465" y="705" font-family="'Google Sans'" font-size="12" fill="#8A9DD6">Blend mode: Color dodge</text>
+  <text x="465" y="775" font-family="'Google Sans'" font-size="11" fill="#6D7C93">Multi-color gradients</text>
+  
+  <!-- Light Mode Card -->
+  <rect x="680" y="610" width="280" height="180" rx="16" fill="#F4F8FF" stroke="#BECCEEE" stroke-width="1"/>
+  <circle cx="740" cy="670" r="30" fill="#6B9EFF"/>
+  <text x="785" y="655" font-family="'Google Sans'" font-size="16" font-weight="700" fill="#0F2450">Light Mode Card</text>
+  <text x="785" y="680" font-family="'Google Sans'" font-size="13" fill="#3D5A8C">For light theme</text>
+  <text x="785" y="705" font-family="'Google Sans'" font-size="12" fill="#6B7FA3">Lighter backgrounds</text>
+  <text x="785" y="775" font-family="'Google Sans'" font-size="11" fill="#8B9DC3">Careful contrast ratios</text>
+  
+  <!-- SECTION: Spacing -->
+  <text x="40" y="850" font-family="'Google Sans'" font-size="24" font-weight="700" fill="#FFFFFF">Spacing Scale</text>
+  
+  <!-- Spacing samples -->
+  <rect x="40" y="890" width="4" height="40" fill="#3A63F3"/>
+  <text x="60" y="920" font-family="'Google Sans'" font-size="13" fill="#E5EDFF">xs = 4px</text>
+  
+  <rect x="40" y="950" width="8" height="40" fill="#3A63F3"/>
+  <text x="60" y="980" font-family="'Google Sans'" font-size="13" fill="#E5EDFF">sm = 8px</text>
+  
+  <rect x="40" y="1010" width="12" height="40" fill="#3A63F3"/>
+  <text x="60" y="1040" font-family="'Google Sans'" font-size="13" fill="#E5EDFF">md = 12px</text>
+  
+  <rect x="40" y="1070" width="16" height="40" fill="#3A63F3"/>
+  <text x="60" y="1100" font-family="'Google Sans'" font-size="13" fill="#E5EDFF">lg = 16px</text>
+  
+  <rect x="40" y="1130" width="24" height="40" fill="#3A63F3"/>
+  <text x="60" y="1160" font-family="'Google Sans'" font-size="13" fill="#E5EDFF">xl = 24px</text>
+  
+  <!-- SECTION: Shadows -->
+  <text x="40" y="1250" font-family="'Google Sans'" font-size="24" font-weight="700" fill="#FFFFFF">Shadow Styles</text>
+  
+  <!-- Small Shadow -->
+  <rect x="40" y="1290" width="160" height="80" rx="12" fill="#1A1F3A" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.3))"/>
+  <text x="120" y="1335" font-family="'Google Sans'" font-size="12" fill="#E5EDFF" text-anchor="middle">Small Shadow</text>
+  
+  <!-- Medium Shadow -->
+  <rect x="220" y="1290" width="160" height="80" rx="12" fill="#1A1F3A" filter="drop-shadow(0 8px 16px rgba(0,0,0,0.4))"/>
+  <text x="300" y="1335" font-family="'Google Sans'" font-size="12" fill="#E5EDFF" text-anchor="middle">Medium Shadow</text>
+  
+  <!-- Large Shadow -->
+  <rect x="400" y="1290" width="160" height="80" rx="12" fill="#1A1F3A" filter="drop-shadow(0 16px 32px rgba(0,0,0,0.5))"/>
+  <text x="480" y="1335" font-family="'Google Sans'" font-size="12" fill="#E5EDFF" text-anchor="middle">Large Shadow</text>
+  
+  <!-- SECTION: Elevation/Glow -->
+  <text x="40" y="1450" font-family="'Google Sans'" font-size="24" font-weight="700" fill="#FFFFFF">Glow Effects</text>
+  
+  <!-- Glow Primary -->
+  <rect x="40" y="1490" width="160" height="80" rx="12" fill="#3A63F3" opacity="0.2" filter="drop-shadow(0 0 12px rgba(58, 99, 243, 0.5))"/>
+  <text x="120" y="1535" font-family="'Google Sans'" font-size="12" fill="#E5EDFF" text-anchor="middle">Primary Glow</text>
+  
+  <!-- Glow Success -->
+  <rect x="220" y="1490" width="160" height="80" rx="12" fill="#00A884" opacity="0.2" filter="drop-shadow(0 0 12px rgba(0, 168, 132, 0.5))"/>
+  <text x="300" y="1535" font-family="'Google Sans'" font-size="12" fill="#E5EDFF" text-anchor="middle">Success Glow</text>
+  
+  <!-- Glow Accent -->
+  <rect x="400" y="1490" width="160" height="80" rx="12" fill="#1ED6FF" opacity="0.2" filter="drop-shadow(0 0 12px rgba(30, 214, 255, 0.5))"/>
+  <text x="480" y="1535" font-family="'Google Sans'" font-size="12" fill="#E5EDFF" text-anchor="middle">Accent Glow</text>
+</svg>
